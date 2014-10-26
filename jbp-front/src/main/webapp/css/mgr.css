@@ -1,0 +1,31 @@
+#nav {
+	top: 10px;
+	position: relative;
+	width: 150px;
+	left: 0px;
+	position: relative;
+	float: left;
+	background-color: rgb(245, 240, 240);
+}
+
+.nav-a {
+	text-align: left;
+	font-size: 14px;
+}
+
+#nav>ul>li>a {
+	text-align: left;
+	font-size: 16px;
+	font-weight: 900;
+}
+
+#main {
+	float: left;
+	margin-left: 5px;
+	height:100px;
+}
+
+#content_iframe {
+	width: 645px;
+	height: 100%
+}
