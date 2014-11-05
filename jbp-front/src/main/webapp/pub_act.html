@@ -10,9 +10,19 @@
 <meta name="keywords" content="活动资讯">
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="bootstrap/css/bootstrap-datetimepicker.min.css"
+	rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
 <link href="css/mgr.css" rel="stylesheet">
 <link href="css/pub_act.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript"
+	src="bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript"
+	src="bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
+
 </head>
 <body>
 	<div id="container">
@@ -51,41 +61,73 @@
 				<div id="main">
 					<!-- <iframe id="content_iframe" name="content_div" frameborder="no">IFRAME</iframe> -->
 					<form class="form-signin" role="form">
-						<span>活动名称：</span> <input type="act_name" class="form-control"
-							placeholder="请填写活动名称" required autofocus> </br> <span>活动类型：</span>
-						<select class="form-control">
-							<option value="1">户外类</option>
-							<option value="2">场馆类</option>
-							<option value="3">演艺类</option>
-							<option value="4">培训类</option>
+						<div class="form-div">
+							<span>活动名称：</span> <input type="act_name" class="form-control"
+								placeholder="请填写活动名称" required autofocus>
+						</div>
+						<div class="form-div">
+							<span>活动类型：</span> <select class="form-control">
+								<option value="1">户外类</option>
+								<option value="2">场馆类</option>
+								<option value="3">演艺类</option>
+								<option value="4">培训类</option>
+							</select>
+						</div>
+						<div class="form-div">
+							<span>活动地区：</span> <label class="checkbox-inline"> <input
+								type="checkbox" id="inlineCheckbox1" value="option1">
+								西湖区
+							</label> <label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox2" value="option2"> 上城区
+							</label> <label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox3" value="option3"> 下城区
+							</label> <label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox3" value="option3"> 江干区
+							</label><label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox3" value="option3"> 滨江区
+							</label><label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox3" value="option3"> 萧山区
+							</label><label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox3" value="option3"> 余杭区
+							</label>
+						</div>
+						<div class="form-div">
+							<label class="checkbox-inline" style="margin-left: 64px">
+								<input type="checkbox" id="inlineCheckbox3" value="option3">
+								临平
+							</label><label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox3" value="option3"> 九堡
+							</label><label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox3" value="option3"> 富阳市
+							</label><label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox3" value="option3"> 临安市
+							</label>
+						</div>
+						
+						<div class="form-div">
+							<span>适龄儿童：</span> <label class="checkbox-inline"> <input
+								type="checkbox" id="inlineCheckbox1" value="option1">
+								0-3
+							</label><label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox1" value="option1"> 3-6
+							</label><label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox1" value="option1"> 6-12
+							</label><label class="checkbox-inline"> <input type="checkbox"
+								id="inlineCheckbox1" value="option1"> 所有
+							</label>
+						</div>
+						
+						<div class="form-div">
+						<span>开始时间:</span>
+							<input class="form-control" style="width:30%;height:30px" type="text" id="begin">
+						<span>结束时间:</span>
+							<input class="form-control" style="width:30%;height:30px" type="text" id="end">
+							<script type="text/javascript">
+								$('#begin').datetimepicker({language: 'zh-CN'});
+								$('#end').datetimepicker({language: 'zh-CN'});
+							</script>
 							
-							
-								<li><a>西湖区</a></li>
-							<li><a>上城区</a></li>
-							<li><a>下城区</a></li>
-							<li><a>江干区</a></li>
-							<li><a>滨江区</a></li>
-							<li><a>萧山区</a></li>
-							<li><a>余杭区</a></li>
-							<li><a>临平</a></li>
-							<li><a>九堡</a></li>
-							<li><a>富阳市</a></li>
-							<li><a>临安市</a></li>
-							<li><a>近郊</a></li>
-							<li><a>建德市</a></li>
-							<li><a>淳安县</a></li>
-							<li><a>桐庐县</a></li>
-							
-						</select> <label class="checkbox-inline"> <input type="checkbox"
-							id="inlineCheckbox1" value="option1"> 西湖区
-						</label> <label class="checkbox-inline"> <input type="checkbox"
-							id="inlineCheckbox2" value="option2"> 上城区
-						</label> <label class="checkbox-inline"> <input type="checkbox"
-							id="inlineCheckbox3" value="option3"> 下城区
-						</label>
-						<label class="checkbox-inline"> <input type="checkbox"
-							id="inlineCheckbox3" value="option3"> 下城区
-						</label>
+						</div>
 						<p class="login-forget-p">
 							<a href="#" class="p-a">忘记登录密码?</a>
 						</p>
