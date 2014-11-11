@@ -14,7 +14,7 @@
 		<mybatis.generator.overwrite>true</mybatis.generator.overwrite>
 		<mybatis.version>3.2.7</mybatis.version>
 		<mybatis.generator.configurationFile>
-			${basedir}/src/test/resources/sql/oracle/generatorConfig.xml
+			${basedir}/src/test/resources/sql/generatorConfig.xml
 		</mybatis.generator.configurationFile>
 		<mybatis.spring.version>1.2.2</mybatis.spring.version>
 		<spring.version>3.2.8.RELEASE</spring.version>
@@ -161,6 +161,11 @@
 				</executions>
 				<dependencies>
 					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.9</version>
+					</dependency>
+					<!-- <dependency>
 						<groupId>com.oracle</groupId>
 						<artifactId>ojdbc14</artifactId>
 						<version>10.2.0.4.0</version>
@@ -169,7 +174,7 @@
 						<groupId>com.ibm.db2</groupId>
 						<artifactId>db2jcc</artifactId>
 						<version>10.5</version>
-					</dependency>
+					</dependency> -->
 				</dependencies>
 			</plugin>
 		</plugins>
