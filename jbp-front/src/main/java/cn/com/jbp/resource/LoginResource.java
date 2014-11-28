@@ -1,4 +1,4 @@
-package cn.com.jbp.service.impl;
+package cn.com.jbp.resource;
 
 public class LoginResource {
 

@@ -1,4 +1,4 @@
-package cn.com.jbp.service.impl;
+package cn.com.jbp.resource;
 
 import java.util.ArrayList;
 import java.util.HashMap;
